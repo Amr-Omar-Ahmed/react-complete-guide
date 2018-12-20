@@ -7,9 +7,8 @@
     text-align: center;
 }
 
-button{
-    background-color: blueviolet
-}
- #nameAge{
-    border: 3px solid blue;
+@media (min-width: 500px) {
+    .Person {
+        width: 450px;
+    }
 }
