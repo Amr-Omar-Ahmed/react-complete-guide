@@ -11,11 +11,11 @@ class App extends Component {
       {id:'sdada', name: 'omar', age: '27' },
       {id:'sfasfdf', name: 'ahmed', age: '30' },
     ],
-    showPerson: true
+    showPersons: true
   }
   showPersonsHandler = () => {
-    const doesShow = this.state.showPerson;
-    this.setState({ showPerson: !doesShow })
+    const doesShow = this.state.showPersons;
+    this.setState({ showPersons: !doesShow })
   }
   deletePersonHandler =(personIndex)=>{
     // const persons= this.state.persons;
@@ -40,7 +40,7 @@ class App extends Component {
   render() {
     
     let personsApp = null;
-    if (this.state.showPerson) {
+    if (this.state.showPersons) {
       personsApp = (
         <Person 
           clicked={this.deletePersonHandler}
@@ -52,7 +52,9 @@ class App extends Component {
     return (
       <div className="App" >
       <CockPit 
+        AppTitle={this.props.AppTitle}
         clicked={this.showPersonsHandler}
+        showPersons={this.state.showPersons}
       />
           {personsApp}
       </div >

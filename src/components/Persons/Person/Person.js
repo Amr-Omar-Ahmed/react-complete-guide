@@ -1,5 +1,5 @@
 import React from 'react';
-import './Person.css'
+import './Person.module.css'
 
 // We can't use state here as we create the component as function 
 //so function is stateless
